@@ -1,0 +1,9 @@
+configs/
+.env
+utils/
+Dockerfile
+docker-compose.yaml
+go.mod
+go.sum
+main.go
+deploy
