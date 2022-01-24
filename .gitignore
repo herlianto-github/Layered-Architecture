@@ -6,4 +6,4 @@ docker-compose.yaml
 go.mod
 go.sum
 main.go
-deploy
+deploy/
