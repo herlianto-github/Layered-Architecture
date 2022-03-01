@@ -4,7 +4,12 @@
 
 An awesome Layered Architecture template to jumpstart your projects!
 
-## Getting Started
+## Table of Content
+
+1. [About The Project](#description)
+2. [Folder Structure](#structuring)
+3. [How To Use](HOW_TO_USE.md)
+4. [Contacts](#contacts)
 
 ### Dependencies
 
@@ -12,103 +17,41 @@ An awesome Layered Architecture template to jumpstart your projects!
 - [Golang](https://go.dev)
 - [Visual Studio Code](https://code.visualstudio.com)
 
-### Installing and initialize this repository
+## Structuring
 
-- Clone this repository
-
-    ```console
-    git clone https://github.com/herlianto-github/Layered-Architecture
-    ```
-
-- Change Project-name
-
-    ```console
-    mv Layered-Architecture/ project-name    
-    ```
-    mv: To rename a directory Layered-Architecture to 'project-name'.
-
-    ```console
-    cd project-name 
-    ```
-    cd: command used to change the current working directory 'project-name'.
-
-- Initialize git
-
-    ```console
-    rm -rf .git    
-    ```
-    rm -rf: Command is used to delete files and directories on Linux and other Unix-like operating systems.
-
-    ```console
-    git init
-    ```
-    git init: Command is an incredibly easy way to create new version-controlled projects.
-
-- Create simple hello world
-
-    ```console
-    go mod init project-name
-    ```
-    Creates a new module, initializing the go.mod file that describes the module. At the start, it will only add the module path and go version in go mod file.
-
-    ```console
-    touch main.go    
-    ```
-    touch: It is used to create a file without any content. The file created using touch command is empty.
-
-    ```console
-    echo 'package main 
-    
-    import "fmt"
-    
-    func main(){
-    
-        fmt.Println("Hello World")
-    
-    }' >> main.go
-    ```
-    echo: Command that is mostly used in shell scripts and batch files to output status text to the screen or a file.
-
-- First commit and push
-
-    ```console
-    git status 
-    ```
-    git status: Command is used to display the state of the repository and staging area.
-
-    ```console
-    git add .    
-    ```
-    git add: Command adds a change in the working directory to the staging area.
-
-    ```console
-    git commit -m "first commit"
-    ```
-    git commit: Command captures a snapshot of the project's currently staged changes.
-
-    ```console
-    git branch -M main
-    ```
-    git branch -M: Command lets you rename branches.
-
-    ```console
-    git remote add origin https://github.com/username/project-origin.git
-    ```
-    git: Command let you add new remote repository.
-
-    ```console
-    git push -u origin main    
-    ```
-    git push: Command is used to upload local repository content to a remote repository.
-
-### Executing program
-
-- How to run the program
-
-    ```console
-    go run main.go    
-    ```
-    go run: Command compiles and runs a main package comprised of the .go files specified on the command line.
+  ```sh
+    .
+    ├── configs                
+    │     └──config.go           # Configs files
+    ├── delivery                 # Endpoints handlers or controllers
+    │     ├──common
+    │     │   ├── global.go           # Constant variable
+    │     │   └── http_responses.go   # Default http code, status, message
+    │     ├──controllers
+    │     │   └── users
+    │     │     ├── formatter_req.go    # Default request format for spesific controllers
+    │     │     ├── formatter_res.go    # Default response format for spesific controllers
+    │     │     ├── users_test.go       # Unit tests for spesific controllers
+    │     │     └── users.go            # Spesific controller
+    │     ├──helpers
+    │     │   └── helper.go           # Helper Function
+    │     └──routes  
+    │         └── routes.go           # Endpoints list
+    ├── entities                
+    │     └── users.go          # database model
+    ├── repository              
+    │     ├── interface.go      # Repository Interface for controllers
+    │     ├── users_test.go     # Unit test for spesific repository
+    │     └── users.go          # Spesific Repository
+    ├── utils                 
+    │     └── driver.go         # Database driver
+    ├── .env                    # Individual working environment variables
+    ├── .gitignore              # Which files to ignore when committing
+    ├── go.mod                  
+    ├── go.sum                  
+    ├── main.go                 # Main Program
+    └── README.md    
+  ```
 
 ## Help
 
@@ -118,7 +61,7 @@ An awesome Layered Architecture template to jumpstart your projects!
 - **Repository** <br/> Contain implementation entities database anq query with ORM.
 - **Utils**<br/>Contain database driver (mySQL)
 
-## Authors
+## Contacts
 
 [Herlianto](https://github.com/herlianto-github)
 
