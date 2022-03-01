@@ -3,7 +3,14 @@
 - Clone this repository
 
     ```sh
-    git clone https://github.com/herlianto-github/Layered-Architecture
+    $ git clone https://github.com/herlianto-github/Layered-Architecture 
+    > Cloning into 'Layered-Architecture'...
+    > remote: Enumerating objects: 43, done.
+    > remote: Counting objects: 100% (43/43), done.
+    > remote: Compressing objects: 100% (26/26), done.
+    > remote: Total 43 (delta 4), reused 14 (delta 1), pack-reused 0
+    > Receiving objects: 100% (43/43), 7.37 KiB | 942.00 KiB/s, done.
+    > Resolving deltas: 100% (4/4), done.  
     ```
 
 - Change Project-name
@@ -16,8 +23,13 @@
     cd project-name 
     ```
 
+    ```sh
+    code .
+    ```
+
   - mv: To rename a directory Layered-Architecture to 'project-name'.
   - cd: command used to change the current working directory 'project-name'.
+  - code . : Launching [vscode](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) from the command line
 
 - Initialize git
 
