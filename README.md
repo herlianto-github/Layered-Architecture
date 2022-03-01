@@ -2,7 +2,7 @@
 
 ## Description
 
-An awesome Layered Architecture template to jumpstart your projects!
+An awesome Layered Architecture template to jumpstart your RESTful API projects!
 
 ## Table of Content
 
