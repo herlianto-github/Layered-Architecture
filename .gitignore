@@ -1,5 +1,4 @@
 deploy/
 docker-compose.yaml
-go.mod
 go.sum
 .env
