@@ -1,4 +1,6 @@
 deploy/
 docker-compose.yaml
 go.sum
-.env
+*.env
+*.DS_Store
+.vscode

@@ -4,6 +4,11 @@ type DefaultResponse struct {
 	Code    int    `json:"code"`
 	Message string `json:"message"`
 }
+type DefaultDataResponse struct {
+	Code    int         `json:"code"`
+	Message string      `json:"message"`
+	Data    interface{} `json:"data"`
+}
 
 func NewSuccessOperationResponse() DefaultResponse {
 	return DefaultResponse{

@@ -28,31 +28,41 @@ An awesome Layered Architecture template to jumpstart your RESTful API projects!
     ├── delivery                 # Endpoints handlers or controllers
     │     ├──common
     │     │   ├── global.go           # Constant variable
-    │     │   └── http_responses.go   # Default http code, status, message
+    │     │   └── http_responses.go   # Default http code, status, message, data
     │     ├──controllers
-    │     │   └── users
-    │     │     ├── formatter_req.go    # Default request format for spesific controllers
-    │     │     ├── formatter_res.go    # Default response format for spesific controllers
-    │     │     ├── users_test.go       # Unit tests for spesific controllers
-    │     │     └── users.go            # Spesific controller
+    │     │   ├── external
+    │     │   └── internal
+    │     │         └── users
+    │     │               ├── formatter_req.go    # Default request format for spesific controllers
+    │     │               ├── formatter_res.go    # Default response format for spesific controllers
+    │     │               ├── users_test.go       # Unit tests for spesific controllers
+    │     │               └── users.go            # Spesific controller
     │     ├──helpers
     │     │   └── helper.go           # Helper Function
-    │     └──routes  
-    │         └── routes.go           # Endpoints list
-    ├── entities                
-    │     └── users.go          # database model
-    ├── repository              
-    │     ├── interface.go      # Repository Interface for controllers
-    │     ├── users_test.go     # Unit test for spesific repository
-    │     └── users.go          # Spesific Repository
-    ├── utils                 
-    │     └── driver.go         # Database driver
+    │     └──routes
+    │         ├── external
+    │         │     └── routes.go     # External Endpoints list
+    │         └── internal
+    │               └── routes.go     # Internal Endpoints list
+    ├── entities  
+    │     └── users              
+    │           └── users.go          # database model
+    ├── repository  
+    │     └── users            
+    │       ├── interface.go      # Repository Interface for controllers
+    │       ├── users_test.go     # Unit test for spesific repository
+    │       └── users.go          # Spesific Repository
+    ├── utils  
+    │     └── databases
+    │           └── driver.go     # Database driver
     ├── .env                    # Individual working environment variables
-    ├── .gitignore              # Which files to ignore when committing
+    ├── .dockerignore           # List of files and/or directories to ignore while building the image
+    ├── .gitignore              # List of files and/or directories to ignore when committing
+    ├── Dockerfile.multistage   # Producing tiny images without hassle
     ├── go.mod                  
     ├── go.sum                  
     ├── main.go                 # Main Program
-    └── README.md    
+    └── README.md
   ```
 
 ## Help
